@@ -1,0 +1,96 @@
+1. Write a Python Program to Add Two Matrices?
+
+A)
+
+mat1 = [[1,2,3],
+        [6, -4, -9],
+        [3,6,9]]
+
+mat2 = [[6,9,3],
+        [1,-1,1],
+        [0, 9, 11]]
+
+total=[]
+        
+for i in range(len(mat1)):
+    row=[]
+    for j in range(len(mat1)):
+        row.append(mat1[i][j]+mat2[i][j])
+    total.append(row)
+    
+print(total)    
+
+
+2. Write a Python Program to Multiply Two Matrices?
+
+A)
+
+A = [[12, 7, 3],
+    [4, 5, 6],
+    [7, 8, 9]]
+
+B = [[5, 8, 1, 2],
+    [6, 7, 3, 0],
+    [4, 5, 9, 1]]
+
+result = [[0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]]
+
+for i in range(len(A)):
+    for j in range(len(B[0])):
+        for k in range(len(B)):
+            result[i][j] += A[i][k] * B[k][j]
+
+for r in result:
+    print(r)
+
+3. Write a Python Program to Transpose a Matrix?
+
+A)
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+
+for i in range(len(X)):
+   
+   for j in range(len(X[0])):
+        result[j][i] = X[i][j]
+
+for r in result:
+    print(r)
+
+
+4. Write a Python Program to Sort Words in Alphabetic Order?
+
+A)
+
+    sentance = input("Enter the words: ")
+    words = [word.lower() for word in sentance.split()]
+    words.sort()
+    
+    print("Sorted order of words:")
+    for word in words:
+        print(word, end = ' ')
+
+
+5. Write a Python Program to Remove Punctuation From a String?
+
+A)
+
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+string = input("Enter the string: ")
+
+outputString = ""
+
+for char in string:
+    if char not in punctuations:
+        outputString += char
+        
+print(outputString)
