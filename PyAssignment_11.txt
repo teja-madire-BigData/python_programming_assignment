@@ -1,0 +1,119 @@
+1. Write a Python program to find words which are greater than given length k?
+
+A)
+
+list_of_words = ['Apple', 'bananana', 'kiwi', 'berry', 'almond']
+k = 5
+
+for i in list_of_words:
+    if len(i)>k:
+        print(i)
+
+
+2. Write a Python program for removing i-th character from a string?
+
+A)
+
+def task2(string: str, i):
+    string = string.replace(string[i], '')
+    return string
+print(task2('abcdefgh', 4))
+
+
+3. Write a Python program to split and join a string?
+
+A)
+
+string = "Write a Python program to split and join a string?"
+
+split = string.split(' ')
+print(split)
+
+join = " ".join(split)
+print(join)
+
+
+4. Write a Python to check if a given string is binary string or not?
+
+A)
+
+string = input("Enter the string: ")
+binary = ['0', '1']
+
+is_binary = True
+for i in string:
+    if i not in binary:
+        is_binary = False
+    
+if is_binary:
+    print("Binary")
+else:
+    print("Not Binary")
+
+
+5. Write a Python program to find uncommon words from two Strings?
+
+A)
+
+string1 = "Write a Python program to split and join a string"
+string2 = "Write a Python program to find uncommon words from two Strings"
+
+
+uniquee=[]
+spt1=string1.split(' ')
+spt2=string2.split(' ')
+
+for i in spt1:
+    if i not in spt2:
+        uniquee.append(i)
+        
+        
+for i in spt2:
+    if i not in spt1:
+        uniquee.append(i)        
+print(uniquee)        
+
+
+6. Write a Python to find all duplicate characters in string?
+
+A)
+
+def task6(string: str):
+    duplicate = []
+    for i in string:
+        if string.count(i) > 1:
+            duplicate.append(i)
+            
+    return set(duplicate)
+print(task6("find all duplicate characters in string"))
+
+
+7. Write a Python Program to check if a string contains any special character?
+
+A)
+
+import re
+
+
+string = input("Enter a string: ")
+regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')  
+
+if(regex.search(string) == None):
+    print("Given string does not contain special characters")
+else:
+    print("Given string contains special characters")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
