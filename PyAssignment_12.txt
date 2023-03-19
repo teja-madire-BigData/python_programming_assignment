@@ -1,0 +1,106 @@
+1. Write a Python program to Extract Unique values dictionary values?
+
+A)
+
+dict1 = {'k1': 1, 'k2': 1, 'k3': 'hello', 'k4': 'hello', 'k5':1234}
+unique_values = {i for i in dict1.values()}
+print(unique_values)
+
+
+2. Write a Python program to find the sum of all items in a dictionary?
+
+A)
+
+test_dict = {'k1' : 89,
+             'k2' : 111,
+             'k3' : 123,
+             'k4' : 5}
+sum1=0
+for i in test_dict.values():
+    sum1+=i;
+print(sum1)   
+
+
+3. Write a Python program to Merging two Dictionaries?
+
+A)
+
+dict1 = { 'x': 1, 'l': 2}
+dict2 = { 'k': 3, 'z': 4, 'x': 11}
+
+for item in dict2.items():
+    dict1.setdefault(item[0], item[1])
+print(dict1)
+
+
+4. Write a Python program to convert key-values list to flat dictionary?
+
+A)
+
+test_dict = {'month' : [1, 2, 3], 'name' : ['Jan', 'Feb', 'March']}
+dict1=dict(zip(test_dict['month'],test_dict['name']))
+print(dict1)
+
+
+5. Write a Python program to insertion at the beginning in OrderedDict?
+
+A)
+
+from collections import OrderedDict
+  
+
+iniordered_dict = OrderedDict([('Feb', '2'), ('Mar', '3')])
+  
+
+iniordered_dict.update({'Jan':'1'})
+iniordered_dict.move_to_end('Jan', last = False)
+  
+
+print ("Ordered Dictionary after insertion : "+str(iniordered_dict))
+
+
+6. Write a Python program to check order of character in string using OrderedDict()?
+
+A)
+
+from collections import OrderedDict 
+  
+def checkOrderofString(str, pattern): 
+      
+    
+    dict = OrderedDict.fromkeys(str) 
+    print(dict)   
+    ptrlen = 0
+    for key,value in dict.items(): 
+        
+        if (key == pattern[ptrlen]): 
+            ptrlen = ptrlen + 1
+          
+        # check if we have traverse complete pattern string 
+        if (ptrlen == (len(pattern))):            
+            return 'true'
+  
+    
+    return 'false'
+  
+
+string = input("enter string : ")
+pattern = input("Enter Pattern : ")
+if checkOrderofString(string,pattern):
+    print("Pattern matched")
+else:
+    print("Pattern not matched")
+
+
+7. Write a Python program to sort Python Dictionaries by Key or Value?
+
+A)
+
+a = {'k1':2, 'k2':1, 'k3':3, '4':4 ,'6':6, 'key7':7}
+
+print(sorted(a.keys()))
+
+print(sorted(a.items()))
+
+print(sorted(a.values()))
+
