@@ -1,0 +1,79 @@
+1. Write a Python Program to find sum of array?
+
+A)
+
+arr=[1,2,3,4,5,6,7,8,9,10]
+sum1=0
+for i in arr:
+    sum1+=i
+    
+print(sum1)    
+
+
+2. Write a Python Program to find largest element in an array?
+
+A)
+
+arr=[11,2,33,14,365,6,87,8,9,10]
+maxi=arr[0]
+
+for i in arr:
+    if i>maxi:
+        maxi=i
+
+print("max of array is: ",maxi)        
+
+
+3. Write a Python Program for array rotation?
+
+A)
+
+arr=[11,2,33,14,365,6,87,8,9,10]
+
+print(arr[::-1])
+
+
+4. Write a Python Program to Split the array and add the first part to the end?
+
+A)
+
+arr=[1,2,3,4,5,6,7,8,9,10]
+
+length=len(arr)//2
+
+arr_1=[]
+
+for i in range(length,len(arr)):
+    arr_1.append(arr[i])
+    
+for i in range(0,length):
+    arr_1.append(arr[i]) 
+    
+print(arr_1)    
+    
+    
+
+5. Write a Python Program to check if given array is Monotonic?
+
+A)
+
+def monotonicCheck(array):
+    flag = True
+    
+    if array[0] >= array[len(array)-1]:
+        for i in range(len(array)-2):
+            if array[i] < array[i+1]:
+                flag = False
+    else:
+        for i in range(len(array)-2):
+            if array[i] > array[i+1]:
+                flag = False
+                
+    return flag
+
+array = [1,2,3,56, 124, 369]
+
+monotonicCheck(array)
+
+
+
