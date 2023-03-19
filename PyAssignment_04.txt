@@ -1,0 +1,90 @@
+1. Write a Python Program to Find the Factorial of a Number?
+
+A)
+
+var=5
+fact=1
+for i in range(var,0,-1):
+    fact=fact*i
+print("Factorial of ",var, " is: ",fact) 
+
+
+2. Write a Python Program to Display the multiplication Table?
+
+A)
+
+num=6
+
+for i in range (1,11):
+    print(num," * ",i," = ",num*i)
+
+
+3. Write a Python Program to Print the Fibonacci sequence?  
+
+A)
+
+num=10
+num1=0
+num2=1
+
+print(num1," ")
+print(num2," ")
+
+for i in range(2,num):
+    num3=num1+num2
+    num1=num2
+    num2=num3
+    print(num3," ")
+    
+
+4. Write a Python Program to Check Armstrong Number?
+
+A)
+
+num=153
+sum1=0
+length=int(len(str(num)))
+temp=num
+while (num!=0):
+    rem=num%10
+    sum1=sum1+rem**length
+    num=num//10
+
+if(sum1==temp):
+    print("armstrong")
+else:
+    print("not armstrong")
+
+
+5. Write a Python Program to Find Armstrong Number in an Interval?
+
+A)
+
+low=1
+high=15000
+arr=[]
+for i in range(low,high):
+    num=i
+    sum1=0
+    length=int(len(str(num)))
+    temp=num
+    while (num!=0):
+        rem=num%10
+        sum1=sum1+rem**length
+        num=num//10
+    
+    if(sum1==temp):
+        arr.append(sum1)
+print(arr) 
+
+
+
+6. Write a Python Program to Find the Sum of Natural Numbers?
+
+A)
+
+num=int(input("enter a number"))
+sum1=0
+for i in range(0,num+1):
+    sum1+=i
+print(sum1)    
