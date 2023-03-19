@@ -1,0 +1,154 @@
+1. Write a program that calculates and prints the value according to the given formula:
+Q = Square root of [(2 C D)/H]
+
+Following are the fixed values of C and H:
+
+C is 50. H is 30.
+
+D is the variable whose values should be input to your program in a comma-separated sequence.
+
+Example
+
+Let us assume the following comma separated input sequence is given to the program:
+
+100,150,180
+
+The output of the program should be:
+
+18,22,24
+
+A)
+
+import math
+
+def calculate_formula(args):
+    c = 50
+    h = 30
+    result = []
+    for d in args:
+        result.append(int(math.sqrt((2*c*int(d))/h)))
+    print(result)
+    
+
+inp = list(input("Enter comma separated numbers input: ").split(','))
+calculate_formula(inp)
+
+
+
+
+2. Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+
+A)
+
+x = int(input("Enter X value: "))
+y = int(input("Enter Y value: "))
+matrix = []
+for i in range(x):
+    row = []
+    for j in range(y):
+        row.append(i*j)
+    matrix.append(row)
+print(matrix)
+
+3. Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+
+A)
+
+wrd='without,hello,bag,world'
+word=wrd.split(',')
+sorted(word)
+print(','.join(word))
+
+
+4. Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+
+A)
+
+words = list(set(input("Enter comma seperated words: ").split(' ')))
+words.sort() 
+print(' '.join(words))
+
+
+5. Write a program that accepts a sentence and calculate the number of letters and digits.
+
+A)
+
+words = input("Enter a sentence: ")
+letters = 0
+digits = 0
+for c in words:
+    if (ord(c) >= ord('a') and ord(c) <= ord('z')) or (ord(c) >= ord('A') and ord(c) <= ord('Z')):
+        letters += 1
+    elif ord(c) >= ord('0') and ord(c) <= ord('9'):
+        digits += 1
+print(letters)
+print(digits)
+
+
+6. A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+
+A)
+
+def check_smallcase(password):
+    check = False
+    for p in password:
+        if ord(p) >= ord('a') and ord(p) <= ord('z'):
+            check = True
+            break
+    return check
+
+def check_uppercase(password):
+    check = False
+    for p in password:
+        if ord(p) >= ord('A') and ord(p) <= ord('Z'):
+            check = True
+            break
+    return check
+
+def check_digit(password):
+    check = False
+    for p in password:
+        if ord(p) >= ord('1') and ord(p) <= ord('9'):
+            check = True
+            break
+    return check
+
+def check_specialchars(password):
+    check = False
+    specials = "!@#$%^&*()_+=->;,:/?`"
+    for p in password:
+        if p in specials:
+            check = True
+            break
+    return check
+
+def check_minlength(password):
+    return len(password) >= 6
+
+def check_maxlength(password):
+    return len(password) <= 12
+
+passwords = list(set(input("Enter comma seperated passwords: ").split(',')))
+valid_passwords = []
+for password in passwords:
+    if check_smallcase(password) and check_uppercase(password) and check_digit(password) and check_specialchars(password) and check_minlength(password) and check_maxlength(password):
+        valid_passwords.append(password)
+print(','.join(valid_passwords))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
